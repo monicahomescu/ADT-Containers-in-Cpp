@@ -1,6 +1,5 @@
 #include <assert.h>
 #include "Matrix.h"
-
 using namespace std;
 
 void testAll() { 
@@ -12,5 +11,4 @@ void testAll() {
 	TElem old = m.modify(1, 1, 6);
 	assert(m.element(1, 2) == NULL_TELEM);
 	assert(old == 5);
-
 }
