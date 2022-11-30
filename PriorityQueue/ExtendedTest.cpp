@@ -4,7 +4,6 @@
 #include <vector>
 #include <exception>
 #include <iostream>
-
 using namespace std;
 
 bool rel2(TPriority p1, TPriority p2) {
@@ -41,7 +40,6 @@ bool rel4(TPriority p1, TPriority p2) {
 		return false;
 	}
 }
-
 
 void testCreate() {
 	cout << "Test create" << endl;
