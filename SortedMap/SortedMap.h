@@ -10,16 +10,16 @@ typedef bool(*Relation)(TKey, TKey);
 
 class SortedMap 
 {
-    friend class SMIterator;
+    	friend class SMIterator;
 
-    private:
-		TElem* elements;
-		int capacity; // maximum number of pairs that can be stored
-		int nrPairs; // the current number of pairs stored in the container
-		Relation rel;
-		void resize();
+private:
+	TElem* elements;
+	int capacity; // maximum number of pairs that can be stored
+	int nrPairs; // the current number of pairs stored in the container
+	Relation rel;
+	void resize();
 
-    public:
+public:
         // implicit constructor
         SortedMap(Relation r);
 
