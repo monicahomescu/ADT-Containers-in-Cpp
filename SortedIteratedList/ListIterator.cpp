@@ -1,7 +1,6 @@
 #include "ListIterator.h"
 #include "SortedIteratedList.h"
 #include <exception>
-
 using namespace std;
 
 ListIterator::ListIterator(const SortedIteratedList& list) : list(list) {
@@ -9,12 +8,12 @@ ListIterator::ListIterator(const SortedIteratedList& list) : list(list) {
 }
 //Theta(1)
 
-void ListIterator::first(){
+void ListIterator::first() {
 	this->current = this->list.head;
 }
 //Theta(1)
 
-void ListIterator::next(){
+void ListIterator::next() {
 	if (this->current == NULL)
 		throw exception();
 	else
@@ -22,7 +21,7 @@ void ListIterator::next(){
 }
 //Theta(1)
 
-bool ListIterator::valid() const{
+bool ListIterator::valid() const {
 	if (this->current == NULL)
 		return false;
 	else
@@ -30,7 +29,7 @@ bool ListIterator::valid() const{
 }
 //Theta(1)
 
-TComp ListIterator::getCurrent() const{
+TComp ListIterator::getCurrent() const {
 	if (this->current == NULL)
 		throw exception();
 	else
