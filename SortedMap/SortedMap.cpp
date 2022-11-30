@@ -118,14 +118,6 @@ bool SortedMap::isEmpty() const
 }
 //Theta(1)
 
-int SortedMap::getKeyRange() const
-{
-	if (this->isEmpty() == true)
-		return -1;
-	else
-		return this->elements[this->nrPairs - 1].first - this->elements[0].first;
-}
-
 SMIterator SortedMap::iterator() const 
 {
 	return SMIterator(*this);
