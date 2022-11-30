@@ -1,7 +1,4 @@
 #pragma once
-//DO NOT INCLUDE SORTEDMAPITERATOR
-
-//DO NOT CHANGE THIS PART
 typedef int TKey;
 typedef int TValue;
 #include <utility>
