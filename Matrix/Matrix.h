@@ -1,8 +1,5 @@
 #pragma once
-
-//DO NOT CHANGE THIS PART
 typedef int TElem;
-//typedef std::pair<int, int>;
 #define NULL_TELEM 0
 
 struct Node {
@@ -13,7 +10,6 @@ struct Node {
 };
 
 class Matrix {
-
 private:
 	int nrL;
 	int nrC;
@@ -40,6 +36,4 @@ public:
 	//returns the previous value from the position
 	//throws exception if (i,j) is not a valid position in the Matrix
 	TElem modify(int i, int j, TElem e);
-
-	//pair<int, int> positionOf(TElem elem) const;
 };
