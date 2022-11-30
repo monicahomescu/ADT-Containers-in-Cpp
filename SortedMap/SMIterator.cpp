@@ -3,20 +3,17 @@
 #include <exception>
 using namespace std;
 
-SMIterator::SMIterator(const SortedMap& m) : map(m)
-{
+SMIterator::SMIterator(const SortedMap& m) : map(m) {
 	this->current = 0;
 }
 //Theta(1)
 
-void SMIterator::first()
-{
+void SMIterator::first() {
 	this->current = 0;
 }
 //Theta(1)
 
-void SMIterator::next()
-{
+void SMIterator::next() {
 	if (this->current == this->map.nrPairs)
 		throw exception();
 	else
@@ -24,8 +21,7 @@ void SMIterator::next()
 }
 //Theta(1)
 
-bool SMIterator::valid() const
-{
+bool SMIterator::valid() const {
 	if (this->current < this->map.nrPairs)
 		return true;
 	else
@@ -33,8 +29,7 @@ bool SMIterator::valid() const
 }
 //Theta(1)
 
-TElem SMIterator::getCurrent() const
-{
+TElem SMIterator::getCurrent() const {
 	if (this->current == this->map.nrPairs)
 		throw exception();
 	else
