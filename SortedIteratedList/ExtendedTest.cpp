@@ -5,9 +5,7 @@
 #include <iostream>
 #include "ListIterator.h"
 #include "SortedIteratedList.h"
-
 using namespace std;
-
 
 //relation order - ascending
 bool asc(TComp c1, TComp c2) {
@@ -276,7 +274,6 @@ void testAddAndSearch() {
 	testAddAndSearch(desc);
 }
 
-
 void testQuantity(){
 	cout << "Test quantity" << endl;
 	SortedIteratedList list = SortedIteratedList(asc);
@@ -338,4 +335,3 @@ void testAllExtended() {
 	testDeleteSearch();
     testQuantity();
 }
-
