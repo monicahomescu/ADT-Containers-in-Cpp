@@ -6,7 +6,6 @@
 #include "SortedMap.h"
 #include "SMIterator.h"
 #include "ExtendedTest.h"
-
 using namespace std;
 
 bool increasing(TKey c1, TKey c2) {
