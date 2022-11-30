@@ -28,10 +28,8 @@ TValue SortedMap::add(TKey k, TValue v) {
 		this->resize();
 	bool found = false;
 	int index = 0;
-	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true) 
-	{
-		if (this->elements[index].first == k) 
-		{
+	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true) {
+		if (this->elements[index].first == k) {
 			found = true;
 			returnedValue = this->elements[index].second;
 			this->elements[index].second = v;
@@ -39,10 +37,8 @@ TValue SortedMap::add(TKey k, TValue v) {
 		else
 			index++;
 	}
-	if (found == false) 
-	{
-		if (this->nrPairs > 0)
-		{
+	if (found == false) {
+		if (this->nrPairs > 0) {
 			int i;
 			for (i = this->nrPairs; i > index; i--)
 				this->elements[i] = this->elements[i - 1];
@@ -59,10 +55,8 @@ TValue SortedMap::search(TKey k) const {
 	TValue returnedValue = NULL_TVALUE;
 	bool found = false;
 	int index = 0;
-	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true)
-	{
-		if (this->elements[index].first == k)
-		{
+	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true) {
+		if (this->elements[index].first == k) {
 			found = true;
 			returnedValue = this->elements[index].second;
 		}
@@ -77,18 +71,15 @@ TValue SortedMap::remove(TKey k) {
 	TValue returnedValue = NULL_TVALUE;
 	bool found = false;
 	int index = 0;
-	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true)
-	{
-		if (this->elements[index].first == k)
-		{
+	while (found == false && index < this->nrPairs && this->rel(this->elements[index].first, k) == true) {
+		if (this->elements[index].first == k) {
 			found = true;
 			returnedValue = this->elements[index].second;
 		}
 		else
 			index++;
 	}
-	if (found == true)
-	{
+	if (found == true) {
 		int i;
 		for (i = index; i < this->nrPairs - 1; i++)
 			this->elements[i] = this->elements[i + 1];
