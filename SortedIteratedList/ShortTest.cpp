@@ -31,15 +31,4 @@ void testAll() {
     	assert(list.remove(it) == 1);
     	assert(list.size() == 0);
     	assert(list.isEmpty());
-
-    SortedIteratedList l = SortedIteratedList(relation1);
-    l.add(1);
-    l.add(3);
-    l.add(3);
-    l.add(3);
-    l.add(4);
-    ListIterator i = l.lastIndexOf(3);
-    assert(i.getCurrent() == 3);
-    assert(i.getNext() == 4);
 }
-
