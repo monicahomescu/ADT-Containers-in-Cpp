@@ -3,9 +3,7 @@
 #include "ExtendedTest.h"
 #include <iostream>
 #include <exception>
-
 using namespace std;
-
 
 void testCreate() {
 	cout << "Test create" << endl;
