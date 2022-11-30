@@ -1,8 +1,7 @@
 #pragma once
 #include "SortedMap.h"
 
-class SMIterator
-{
+class SMIterator {
 	friend class SortedMap;
 
 private:
