@@ -10,7 +10,6 @@ struct SLLNode {
 };
 
 class SortedIteratedList {
-private:
 	friend class ListIterator;
 	
 private:
