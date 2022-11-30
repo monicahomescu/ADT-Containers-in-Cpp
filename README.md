@@ -14,4 +14,4 @@
 
 ## Matrix
 
-- represented as a sparse matrix where <line, column, value> triples (value ≠ 0) are memorized, ordered lexicographically considering the line and column of every element. The elements are stored in a hashtable with separate chaining
+- represented as a sparse matrix where <line, column, value> triples are memorized, ordered lexicographically considering the line and column of every element; the elements are stored in a hashtable with separate chaining
