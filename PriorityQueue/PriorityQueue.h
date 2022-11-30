@@ -1,10 +1,7 @@
 #pragma once
 #include <vector>
 #include <utility>
-
 using namespace std;
-
-//DO NOT CHANGE THIS PART
 typedef int TElem;
 typedef int TPriority;
 typedef std::pair<TElem, TPriority> Element;
@@ -24,7 +21,6 @@ private:
 	int firstFree;
 	Relation rel;
 	int length;
-
 	void resize();
 
 public:
@@ -47,7 +43,4 @@ public:
 
 	//destructor
 	~PriorityQueue();
-
-	TPriority priorityOf(TElem elem) const;
-
 };
