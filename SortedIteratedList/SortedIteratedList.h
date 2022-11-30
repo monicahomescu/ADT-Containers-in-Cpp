@@ -1,14 +1,10 @@
 #pragma once
-//DO NOt INCLUDE LISTITERATOR
-
-//DO NOT CHANGE THIS PART
 class ListIterator;
 typedef int TComp;
 typedef bool (*Relation)(TComp, TComp);
 #define NULL_TCOMP -11111
 
-struct SLLNode
-{
+struct SLLNode {
 	TComp info;
 	SLLNode* next;
 };
@@ -16,6 +12,7 @@ struct SLLNode
 class SortedIteratedList {
 private:
 	friend class ListIterator;
+	
 private:
 	SLLNode* head;
 	Relation relation;
@@ -50,12 +47,6 @@ public:
 	//returns an iterator that points to the element, if it appear in the list, or an invalid iterator if the element is not in the list
 	ListIterator search(TComp e) const;
 
-	ListIterator lastIndexOf(TComp elem) const;
-
-	//TODO elimina
-	//void print();
-
 	//destructor
 	~SortedIteratedList();
-
 };
