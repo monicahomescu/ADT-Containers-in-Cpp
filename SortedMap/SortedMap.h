@@ -10,7 +10,7 @@ typedef bool(*Relation)(TKey, TKey);
 
 class SortedMap 
 {
-	friend class SMIterator;
+    friend class SMIterator;
 
     private:
 		TElem* elements;
@@ -20,9 +20,8 @@ class SortedMap
 		void resize();
 
     public:
-
-    // implicit constructor
-    SortedMap(Relation r);
+        // implicit constructor
+        SortedMap(Relation r);
 
 	// adds a pair (key,value) to the map
 	//if the key already exists in the map, then the value associated to the key is replaced by the new value and the old value is returned
@@ -41,10 +40,10 @@ class SortedMap
 	//checks whether the map is empty or not
 	bool isEmpty() const;
 
-    // return the iterator for the map
-    // the iterator will return the keys following the order given by the relation
-    SMIterator iterator() const;
+    	// return the iterator for the map
+    	// the iterator will return the keys following the order given by the relation
+   	 SMIterator iterator() const;
 
-    // destructor
-    ~SortedMap();
+    	// destructor
+    	~SortedMap();
 };
