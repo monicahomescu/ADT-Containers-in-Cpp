@@ -3,8 +3,7 @@
 #include <exception>
 using namespace std;
 
-SortedMap::SortedMap(Relation r) 
-{
+SortedMap::SortedMap(Relation r) {
 	this->rel = r;
 	this->nrPairs = 0;
 	this->capacity = 1;
@@ -12,8 +11,7 @@ SortedMap::SortedMap(Relation r)
 }
 //Theta(1)
 
-void SortedMap::resize() 
-{
+void SortedMap::resize() {
 	TElem* newElems = new TElem[this->capacity * 2];
 	int index;
 	for (index = 0; index < this->nrPairs; index++)
@@ -24,8 +22,7 @@ void SortedMap::resize()
 }
 //Theta(nrPairs)
 
-TValue SortedMap::add(TKey k, TValue v) 
-{
+TValue SortedMap::add(TKey k, TValue v) {
 	TValue returnedValue = NULL_TVALUE;
 	if (this->capacity == this->nrPairs)
 		this->resize();
@@ -58,8 +55,7 @@ TValue SortedMap::add(TKey k, TValue v)
 }
 //BC: Theta(1), WC: Theta(nrPairs), T: O(nrPairs)
 
-TValue SortedMap::search(TKey k) const 
-{
+TValue SortedMap::search(TKey k) const {
 	TValue returnedValue = NULL_TVALUE;
 	bool found = false;
 	int index = 0;
@@ -77,8 +73,7 @@ TValue SortedMap::search(TKey k) const
 }
 //BC: Theta(1), WC: Theta(nrPairs), T: O(nrPairs)
 
-TValue SortedMap::remove(TKey k) 
-{
+TValue SortedMap::remove(TKey k) {
 	TValue returnedValue = NULL_TVALUE;
 	bool found = false;
 	int index = 0;
@@ -103,14 +98,12 @@ TValue SortedMap::remove(TKey k)
 }
 //BC: Theta(nrPairs), WC: Theta(nrPairs), T: Theta(nrPairs)
 
-int SortedMap::size() const 
-{
+int SortedMap::size() const {
 	return this->nrPairs;
 }
 //Theta(1)
 
-bool SortedMap::isEmpty() const 
-{
+bool SortedMap::isEmpty() const {
 	if (this->nrPairs == 0)
 		return true;
 	else
@@ -118,14 +111,12 @@ bool SortedMap::isEmpty() const
 }
 //Theta(1)
 
-SMIterator SortedMap::iterator() const 
-{
+SMIterator SortedMap::iterator() const {
 	return SMIterator(*this);
 }
 //Theta(1)
 
-SortedMap::~SortedMap()
-{
+SortedMap::~SortedMap() {
 	delete[] this->elements;
 }
 //Theta(1)
