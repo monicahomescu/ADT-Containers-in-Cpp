@@ -35,12 +35,5 @@ void testAll(){
     }
     assert(sm.remove(1) == 3);
     assert(sm.isEmpty());
-
-    assert(sm.getKeyRange() == -1);
-    sm.add(1, 2);
-    sm.add(1, 3);
-    sm.add(2, 3);
-    sm.add(5, 4);
-    assert(sm.getKeyRange() == 4);
 }
 
