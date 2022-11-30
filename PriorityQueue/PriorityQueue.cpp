@@ -1,4 +1,3 @@
-
 #include "PriorityQueue.h"
 #include <exception>
 using namespace std;
@@ -100,19 +99,3 @@ PriorityQueue::~PriorityQueue() {
 	delete[] this->nodes;
 };
 //Theta(1)
-
-TPriority PriorityQueue::priorityOf(TElem elem) const
-{
-	int current = this->head;
-	TPriority p = -1;
-	while (current != -1) {
-		if (this->nodes[current].info.first == elem)
-		{
-			p = this->nodes[current].info.second;
-			break;
-		}
-		current = this->nodes[current].next;
-	}
-	return p;
-}
-//BC:Theta(1), WC:Theta(length); T:O(length)
