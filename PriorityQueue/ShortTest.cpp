@@ -3,23 +3,15 @@
 #include <assert.h>
 
 bool rel(TPriority p1, TPriority p2) {
-	if (p1 <= p2) {
+	if (p1 <= p2)
 		return true;
-	}
-	else {
+	else 
 		return false;
-	}
 }
 
-
-
-
-void testAll() { //call each function and see if it exists
+void testAll() {
 	PriorityQueue pq(rel);
-	
 	assert(pq.isEmpty() == true);
-	
-	//adaugam 5, 3, 10, 2, 12 -> rezultat: 2, 3, 5, 10, 12
 	pq.push(5, 5);
 	assert(pq.top().first == 5);
 	assert(pq.top().second == 5);
@@ -46,18 +38,4 @@ void testAll() { //call each function and see if it exists
 	assert(pq.top().second == 12);
 	assert(pq.pop().second == 12);
 	assert(pq.isEmpty() == true);
-
-
-	PriorityQueue pq1(rel);
-	pq1.push(10, 11);
-	assert(pq1.priorityOf(10) == 11);
-	pq1.push(5, 5);
-	assert(pq1.priorityOf(5) == 5);
-	pq1.push(5, 3);
-	assert(pq1.priorityOf(5) == 5);
-	pq1.push(1, 12);
-	assert(pq1.priorityOf(1) == 12);
-	pq1.push(5, 1);
-	assert(pq1.priorityOf(5) == 5);
-	assert(pq1.priorityOf(20) == -1);
 }
