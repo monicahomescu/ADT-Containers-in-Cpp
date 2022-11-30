@@ -8,8 +8,7 @@ typedef std::pair<TKey, TValue> TElem;
 class SMIterator;
 typedef bool(*Relation)(TKey, TKey);
 
-class SortedMap 
-{
+class SortedMap {
     	friend class SMIterator;
 
 private:
