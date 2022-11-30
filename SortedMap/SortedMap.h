@@ -44,8 +44,6 @@ class SortedMap
 	//checks whether the map is empty or not
 	bool isEmpty() const;
 
-	int getKeyRange() const;
-
     // return the iterator for the map
     // the iterator will return the keys following the order given by the relation
     SMIterator iterator() const;
