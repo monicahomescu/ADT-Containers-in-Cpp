@@ -1,5 +1,4 @@
 #include <assert.h>
-
 #include "SortedMap.h"
 #include "SMIterator.h"
 #include "ShortTest.h"
@@ -7,18 +6,16 @@
 using namespace std;
 
 bool relatie1(TKey cheie1, TKey cheie2) {
-	if (cheie1 <= cheie2) {
+	if (cheie1 <= cheie2)
 		return true;
-	}
-	else {
+	else 
 		return false;
-	}
 }
 
-void testAll(){
-	SortedMap sm(relatie1);
-	assert(sm.size() == 0);
-	assert(sm.isEmpty());
+void testAll() {
+    SortedMap sm(relatie1);
+    assert(sm.size() == 0);
+    assert(sm.isEmpty());
     sm.add(1,2);
     assert(sm.size() == 1);
     assert(!sm.isEmpty());
@@ -36,4 +33,3 @@ void testAll(){
     assert(sm.remove(1) == 3);
     assert(sm.isEmpty());
 }
-
