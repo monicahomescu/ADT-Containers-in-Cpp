@@ -66,10 +66,6 @@ TElem Matrix::modify(int i, int j, TElem e) {
 //BC: Th(1)
 //WC: Th(cap)
 
-//pair<int, int> Matrix::positionOf(TElem elem) const {
-//
-//}
-
 void Matrix::resize() {
 	Node** newChain = new Node * [cap * 2];
 	for (int i = 0; i < cap * 2; i++)
